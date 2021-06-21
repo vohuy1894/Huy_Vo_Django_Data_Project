@@ -8,18 +8,23 @@
   
   <div class="container">
     <div class="row">
-      <div class="col-lg-15 col-md-20 mx-auto">
+      <div class="col-lg-14 col-md-18 mx-auto">
         <div class="post-preview">
-          <a href="#" rel="noopener noreferrer">
+         {% for i in articles %}
+          <a href="{{i.url}}" rel="noopener noreferrer">
             <h2 class="post-title">
+              {{ i.title}}
             </h2>    
           </a>
+          <img src="{{i.urlToImage}}" alt="" height="400px" width="100%" >
             <p class="post-subtitle">
+              {{ i.description }}
             </p>
-          <p class="post-meta">Posted by
-            <a href="#">News </a>
+          <p class="post-meta">Posted by {{i.author}}</p>
+          <hr>
+            {%endfor%}
         </div>
-        <hr>
+
         
       </div>
     </div>
