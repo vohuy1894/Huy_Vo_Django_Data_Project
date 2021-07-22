@@ -46,15 +46,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    {%if current_user.is_authenticated%}
+                    {%if user.is_authenticated%}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Post</a>
+                        <a class="nav-link" href="#">My Portfolio</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Create Post</a>  
+                    <a class="nav-link" href="#">Create Portfolio</a>  
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Logout</a>  
+                      <a class="nav-link" href="{% url 'logout'%}">Logout</a>  
                       </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">'s Dashboard </a>  
@@ -65,7 +65,7 @@
                       <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
                   </li>
                   <li class="nav-item">
-                        <a class="nav-link" href="#">Sign In</a>
+                        <a class="nav-link" href="{% url 'login' %}">Sign In</a>
                     </li>
                     {%endif%}
                   <li class="nav-item">
@@ -84,7 +84,7 @@
     </nav>
 
     <!-- Page Header -->
-  <header class="masthead" style="background-color:#6a5acd;">
+  <header class="masthead" style="background-color:#00a170;">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">

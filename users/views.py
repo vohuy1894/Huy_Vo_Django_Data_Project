@@ -13,4 +13,4 @@ def register(request):
 			return redirect('stock-home')
 	else:
 		form = RegisterForm()
-	return render(request, 'users/signup.html', {'form': form})
+	return render(request, 'users/register.html', {'form': form})
