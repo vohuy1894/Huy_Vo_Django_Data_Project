@@ -50,15 +50,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">My Portfolio</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Create Portfolio</a>  
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% url 'logout'%}">Logout</a>  
-                      </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">'s Dashboard </a>  
-                    </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{user.username}}'s Account
+                    </a>
+                    <div  style="padding:15px 25px; height:350px; font-size:15px" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item nav-link" href="{%url 'profile'%}">Your Account Data</a>
+                      <a class="dropdown-item nav-link" href="{%url 'logout'%}">News</a>
+                      <a class="dropdown-item nav-link" href="{%url 'logout'%}">Rewards</a>
+                      <a class="dropdown-item nav-link" href="{%url 'logout'%}">Setting</a>
+                      <a class="dropdown-item nav-link" href="#">Search Stocks</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item nav-link" href="{% url 'stock-about' %}">About</a>
+                      <a class="dropdown-item nav-link" href="{%url 'stock-contact'%}">Contact</a>
+                      <a class="dropdown-item nav-link" href="#">Help</a>
+                      <a class="dropdown-item nav-link" style="color:#00a170" href="{%url 'logout'%}">Logout</a>
+                    </div>
+                  </li>
                   
                   {%else%}
                     <li class="nav-item">
@@ -67,16 +75,7 @@
                   <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Sign In</a>
                     </li>
-                    {%endif%}
-                  <li class="nav-item">
-                        <a class="nav-link" href="{% url 'stock-about' %}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Search</a>
-                    </li>
+                  {%endif%}
                 </ul>
 
             </div>

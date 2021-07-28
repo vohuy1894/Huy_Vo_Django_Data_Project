@@ -110,6 +110,10 @@
 	#bootstrap-overrides .btn{
 		color: #6a5acd;
 	}
+	#bootstrap-overrides .signup-form .form-group{
+		color:#00A170; 
+		font-weight:bold;
+	}
 </style>
 </head>
 {%block content%}
@@ -144,14 +148,14 @@
 			<div class="form-group col-md-6 mb-4">
 				{{ form.password2|as_crispy_field }}  		
 			</div>	
-				<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+				<label class="checkbox-inline" style="font-weight:bold"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
 			</div>
 			<div class="form-group">
-				<button class="btn btn-outline-info" type="submit" >Sign Up</button>
+				<button class="btn btn-outline-info" style="color:#00A170; border-color:#00A170; margin-top:15px" type="submit" >Sign Up</button>
 	        </div>
     	</div>
     </form>
-	<div class="text-center" >Already have an account? <a href={% url 'login' %} style="color:SlateBlue;">Sign in</a></div>
+	<div class="text-center" >Already have an account? <a href={% url 'login' %} style="color:#00A170;">Sign in</a></div>
 </div>
 
 </body>
